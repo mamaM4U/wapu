@@ -18,18 +18,6 @@ dart pub global activate dart_frog_cli
 docker-compose up -d
 ```
 
-#### Config
-```
-touch .env
-```
-Put in these details:
-```
-DATABASE_URL=postgres://postgres:postgres@localhost:5432/postgres
-DATABASE_NO_SSL=true
-FALLBACK_URL=https://google.com
-```
-
-
 #### SQL
 
 Link table:
