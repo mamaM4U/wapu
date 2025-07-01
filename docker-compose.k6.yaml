@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  k6:
+    image: grafana/k6
+    container_name: chip-k6
+    volumes:
+      - ./k6:/scripts
+    entrypoint: ["k6", "run", "/scripts/load-test.js"]
+    networks:
+      - chip-network
+
+networks:
+  chip-network:
+    external: true
